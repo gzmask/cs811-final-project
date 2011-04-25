@@ -222,9 +222,16 @@ where we only used 24 bits. This is possible because of the new code mapping:
 \]
 Thus, we use about 2.67 bits for each outcome on average, instead of 3 bits. By measuring entropy, it's possible that we can compress data and exploit better coding. For example, in English, words being used more frequently codes with less letter than words being used rarely. Such as \{'I', 'is', 'a'\} compare to \{'communism', 'encephalopathy'\}
 
-\subsection{Exercise 2 - measuring the entropy of a language}
+\subsection{Exercise 2 - entropy of languages}
+Try to explain why languages like English is more effecient to be inputed by a keyboard than languages like Chinese using Shannon's information theory.\\
+
+Assumptions:\\
+A typical keyboard device has about 50 keys related to language inputs.\\
+Each English letter is being used evenly, and here we only considering 26 English alphabets plus peroid and comma.\\
+There are about 3000 commonly used Chinese characters and they are being used evenly.\\
 
 \section{Algorithmic information theory}
+We can see that Shannon's information theory look at information in a probablistic and statistic way.
 
 \subsection{Definition}
 
@@ -319,6 +326,39 @@ Thus the entropy gain of rolling a die is:
 	H_{before}(X) - H_{after}(X) = 2.584962500721156 - 0 = 2.584962500721156
 \]
 We say that the entropy gain for the event of rolling a fair die is about 2.58 bits.
+
+\subsection{Exercise 2 Solution}
+A typical keyboard device has about 50 keys related to language inputs. Thus it's average entropy for each key stroke is:
+\[
+	H(X) = -\sum_{i=1}^{50}p(x_i)log_{2}p(x_i)
+\]
+\[
+\implies
+	H(X) = -\sum_{i=1}^{50}\frac{1}{50}log_{2}\frac{1}{50}
+\]
+\[
+	= log_{2}50 \approx 5.643856189774724
+\]
+Which is about 5.6 bits entropy for each key stroke.\\
+Now let's calculate the average entropy for each letter of English. Assuming their possibility distribution is even and considering 26 English alphabets plus peroid and comma:
+\[
+	H(X) = -\sum_{i=1}^{28}\frac{1}{28}log_{2}\frac{1}{28}
+\]
+\[
+	= log_{2}28 \approx 4.807354922057604
+\]
+Thus we have about 4.8 bits entropy for each letter in English.\\
+Storing each letter in English with 5.6 bits of entropy per key stroke is sufficient. Thus we can have one-to-one mapping between keys and letters and users do not need to remember any coding.\\
+
+Let's look at entropy of each character of Chinese. Assuming there are about 3000 commonly used Chinese characters and their possibility distribution is even: 
+\[
+	H(X) = -\sum_{i=1}^{3000}\frac{1}{3000}log_{2}\frac{1}{3000}
+\]
+\[
+	= log_{2}3000 \approx 11.55
+\]
+Thus we have about 11.55 bits entropy for each character in Chinese.\\
+Storing each letter in Chinese with 5.6 bits of entropy per key stroke is insufficient. Thus we need a coding schema containning more than three key strokes for each Chinese character, and users have to remember the coding schema in order to use the keyboard as an input device. In fact, Chinese Pinyin is being use as a such schema, where Chinese Pinyin is very close to English compare to traditional Chinese.\\
 
 \begin{thebibliography}{9}
 
