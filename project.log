@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  25 APR 2011 15:12
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  25 APR 2011 15:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -214,37 +214,41 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+Underfull \hbox (badness 10000) in paragraph at lines 37--39
+
+ []
+
 [1
 
 {/usr/local/texlive/2010/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2]
-Overfull \hbox (36.19002pt too wide) in paragraph at lines 109--111
+Overfull \hbox (36.19002pt too wide) in paragraph at lines 114--116
 \OT1/cmr/m/n/12 We can see that when the pos-si-bil-i-ties are not even, the en
 -tropy is 0.721928094887362
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--111
+Underfull \hbox (badness 10000) in paragraph at lines 114--116
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--117
+Underfull \hbox (badness 10000) in paragraph at lines 118--122
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--117
+Underfull \hbox (badness 10000) in paragraph at lines 118--122
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 136--138
+Underfull \hbox (badness 10000) in paragraph at lines 141--143
 
  []
 
 [4]
-Overfull \hbox (6.02399pt too wide) detected at line 181
+Overfull \hbox (6.02399pt too wide) detected at line 186
 \OT1/cmr/m/n/12 000 \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 x[]; \OT1/cmr/m/n/12 
 001 \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 x[]; \OT1/cmr/m/n/12 010 \OMS/cmsy/m/
 n/12 ^^@ \OML/cmm/m/it/12 x[]; \OT1/cmr/m/n/12 011 \OMS/cmsy/m/n/12 ^^@ \OML/cm
@@ -255,34 +259,34 @@ m/n/12 ^^@ \OML/cmm/m/it/12 unused
  []
 
 [5]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 223.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 228.
 
  (/usr/local/texlive/2010/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 223.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 228.
 
-Underfull \hbox (badness 10000) in paragraph at lines 226--227
+Underfull \hbox (badness 10000) in paragraph at lines 231--232
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--232
+Underfull \hbox (badness 10000) in paragraph at lines 233--237
 
  []
 
 [6] [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 351--354
+Underfull \hbox (badness 10000) in paragraph at lines 364--367
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 361--364
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 374--377
 
  []
 
-[9] [10] (./project.aux) ) 
+[10] (./project.aux) ) 
 Here is how much of TeX's memory you used:
  2372 strings out of 493747
  33133 string characters out of 3143546
@@ -290,20 +294,20 @@ Here is how much of TeX's memory you used:
  5645 multiletter control sequences out of 15000+200000
  10581 words of font info for 38 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 38i,6n,23p,514b,195s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2010/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmex10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmi8.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr17.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr8.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-ti12.pfb>
-Output written on project.pdf (10 pages, 139943 bytes).
+ 38i,6n,23p,576b,195s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2010/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmbx10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmbx12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmex10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi8.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr17.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r8.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12
+.pfb>
+Output written on project.pdf (10 pages, 141548 bytes).
 PDF statistics:
  81 PDF objects out of 1000 (max. 8388607)
  57 compressed objects within 1 object stream

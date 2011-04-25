@@ -35,7 +35,12 @@ Let $x_i \in X$, and $p(x_i)$ be the probability mass function of X, then the en
 \[
 	H(X) = \sum_{i=1}^{n}p(x_i)I(x_i) = -\sum_{i=1}^{n}p(x_i)log_{2}p(x_i)
 \]
-Note that each $p(x_i)I(x_i)$ gives the expect value, where $I(x_i)$ is the average entropy of the specific event outcome. Here we assume the unit of entropy is bit, therefore the logarithm base is 2.
+Note that each $p(x_i)I(x_i)$ gives the expect value, where $I(x_i)$ is the average entropy of the specific event outcome. Here we assume the unit of entropy is bit, therefore the logarithm base is 2.\\
+
+The information gain of an event is simply the entropy difference before and after the event:
+\[
+	H_{gained}(X) = H_{before}(X) - H_{after}(X)
+\]
 
 \subsection{The fair coin tossing example}
 When tossing a coin, the outcomes are either head($x_h$) or tail($x_t$). Thus
@@ -231,11 +236,48 @@ Each English letter is being used evenly, and here we only considering 26 Englis
 There are about 3000 commonly used Chinese characters and they are being used evenly.\\
 
 \section{Algorithmic information theory}
-We can see that Shannon's information theory look at information in a probablistic and statistic way. By doing exercise 2, we can also see that using entropy to encode a language is tedious and troublesome. Even calculating the entropy of a language is hard, considering the probabilitic usage of different letters or characters are not the same. In reality, English has an entropy of 4.03 bits per word and Chinese has 9.65 bits per character. Calculating these entropies requires tremendous effort.
+We can see that Shannon's information theory look at information in a probablistic and statistic way. By doing exercise 2, we can also see that using entropy to encode a language is tedious and troublesome. Even calculating the entropy of a language is hard, considering the probabilitic usage of different letters or characters are not the same. In reality, English has an entropy of 4.03 bits per word and Chinese has 9.65 bits per character. Calculating these entropies requires tremendous effort, not to mention how to establish a coding schema between then.
 
 Now let's look at a more descriptive and logical approach for the definition of information using Turing Machine's power.
 
-\subsection{Definition}
+\subsection{Minimal length descriptions}
+Suppose we have two piece of information represented as binary strings:
+\[
+A = 0101010101010101010101010101010101010101
+\]
+\[
+B = 111001011010001110101000011101001101
+\]
+Simply applying Shannon's information theory, by the size of the storage space, we might say that A has more information because its storage space is sufficient for more entropy. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{Exercise Solutions}
 
@@ -350,7 +392,7 @@ Now let's calculate the average entropy for each letter of English. Assuming the
 	= log_{2}28 \approx 4.807354922057604
 \]
 Thus we have about 4.8 bits entropy for each letter in English.\\
-Storing each letter in English with 5.6 bits of entropy per key stroke is sufficient. Thus we can have one-to-one mapping between keys and letters and users do not need to remember any coding.\\
+Storing each letter in English with 5.6 bits of entropy per key stroke is sufficient. Thus we can have one-to-one mapping between keys and letters and users do not need to remember any coding. We can see that English and keyboard are naturally fit.\\
 
 Let's look at entropy of each character of Chinese. Assuming there are about 3000 commonly used Chinese characters and their possibility distribution is even: 
 \[
