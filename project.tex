@@ -31,7 +31,7 @@ In information theory, the entropy of information means the measurement of the u
 	H(X) = E(I(X))
 \]
 Where E is the expected value, and I is the information content of X.
-Let $x_i \in X$, and $p(x_i)$ be the probability mass function of X, then the entropy can be written as:
+Let $x_i \in X$, and $p(x_i)$ be the probability mass function of X, then the entropy can be written as\cite{reza94}:
 \[
 	H(X) = \sum_{i=1}^{n}p(x_i)I(x_i) = -\sum_{i=1}^{n}p(x_i)log_{2}p(x_i)
 \]
@@ -86,7 +86,7 @@ Which equals to:
 	H_{before}(X) = -(0.8 \times log_{2} 0.8 + 0.2 \times log_{2} 0.2)
 \]
 \[
-		= -(0.8 \times -0.321928094887362 + 0.2 \times -2.321928094887362)
+		\approx -(0.8 \times -0.321928094887362 + 0.2 \times -2.321928094887362)
 \]
 \[
 		= -(-0.25754247590989-0.464385618977472)
@@ -111,8 +111,8 @@ We can see that when the possibilities are not even, the entropy is 0.7219280948
 
 \subsection{The average information gain}
 The above two examples gives us how many information on average we would gain during a fair coin toss event and a unfair coin toss event.\\
-Notice that these information gains are average information gains for each coin tosses considering both outcomes of heads and tails.\\
-What if the average information gain for the coin toss event that the outcomes are heads only or tails only, then? Let's look at the following examples:\\
+Notice that these information gains are average information gains for each coin tosses considering both outcomes of heads and tails.\\\\
+What is the average information gain for the coin toss event that the outcomes are heads only or tails only, then? Let's look at the following examples:\\
 We will look into I(X) where I is the information content of X.\\
 \[
 	I(X) = - log_2 p(x_i)
@@ -142,7 +142,7 @@ In the case of the unfair coin toss with outcomes of heads only:
 \]
 \[
 \implies
-	I(X) = - log_2 \frac{4}{5} = 0.321928094887362 
+	I(X) = - log_2 \frac{4}{5} \approx 0.321928094887362 
 \]
 
 In the case of the unfair coin toss with outcomes of tails only:
@@ -151,12 +151,84 @@ In the case of the unfair coin toss with outcomes of tails only:
 \]
 \[
 \implies
-	I(X) = - log_2 \frac{1}{5} = 2.321928094887362 
+	I(X) = - log_2 \frac{1}{5} \approx 2.321928094887362 
 \]
 When the outcome is head, we only gained 0.3 bit of information, where when the outcome is tail, we gained 2.3 bits of information. We discovered that more entropy is gained on average with each unfair coin toss event with the outcome of less common. We conclude that when the outcome of an event is less common, then it contains more information.
 
 \subsection{Exercise 1 - Rolling a fair die }
 What is the average entropy gain for the event of rolling a fair die? (in binary bits)
+
+\subsection{The Coding theory}
+After finished exercise 1, we can see that the average entropy gain for the event of rolling a fair die is about 2.58 bits. How many bits of storage we need to save this information? Let's try using two bits first:
+\[
+	00 - x_1,
+	01 - x_2,
+	10 - x_3,
+	11 - x_4,
+	?? - x_5,
+	?? - x_6
+\]
+Apparently, with two bits of storage, we can only save 4 out of 6 outcomes. Let's increase to three bits:
+\[
+	000 - x_1,
+	001 - x_2,
+	010 - x_3,
+	011 - x_4,
+	100 - x_5,
+	101 - x_6,
+	110 - unused,
+	111 - unused
+\]
+Now we can save all the outcomes. However, 110 and 111 are unused and wasted. This is becase with three bits storage, we have:
+\[
+	H(X) = - \sum_1^8 \frac{1}{8} log_2 \frac{1}{8} = 3
+\]
+Which is capable of saving 3 bits of entropy. For the event of rolling a fair die, only 2.58 bits of entropy are needed.\\
+Let's look at an example of rolling a fair die 8 times with the outcomes of $x_2,x_4,x_5,x_3,x_6,x_4,x_3,x_1$ in sequence. Using the three bits code mapping above we can write this as:
+\[
+	001011100010101011010000
+\]
+Now let's look at another coding for the 6 outcomes:
+\[
+	010 - x_1,
+	011 - x_2,
+	10 - x_3,
+	11 - x_4
+	000 - x_5,
+	001 - x_6,
+\]
+And let's encode our example of rolling a fair die 8 times with the outcomes of $x_2,x_4,x_5,x_3,x_6,x_4,x_3,x_1$ in sequence:
+\[
+	01111000100011110010
+\]
+We store 8 outcomes with 20 bits, compare to:
+\[
+	001011100010101011010000
+\]
+where we only used 24 bits. This is possible because of the new code mapping:
+\[
+	010 - x_1,
+	011 - x_2,
+	10 - x_3,
+	11 - x_4
+	000 - x_5,
+	001 - x_6,
+\]
+\[
+	H(X) = \frac{1}{6} \times 3 + \frac{1}{6} \times 3 + \frac{1}{6} \times 2 + \frac{1}{6} \times 2 + \frac{1}{6} \times 3 + \frac{1}{6} \times 3
+\]
+\[
+	= \frac{1}{2} + \frac{1}{2}+ \frac{1}{3}+ \frac{1}{3}+ \frac{1}{2}+ \frac{1}{2} \approx 2.67
+\]
+Thus, we use about 2.67 bits for each outcome on average, instead of 3 bits. By measuring entropy, it's possible that we can compress data and exploit better coding. For example, in English, words being used more frequently codes with less letter than words being used rarely. Such as \{'I', 'is', 'a'\} compare to \{'communism', 'encephalopathy'\}
+
+\subsection{Exercise 2 - measuring the entropy of a language}
+
+\section{Algorithmic information theory}
+
+\subsection{Definition}
+
+\section{Exercise Solutions}
 
 \subsection{Exercise 1 Solution}
 First, we list the domain of the outcomes of rolling a fair die:
@@ -247,11 +319,20 @@ Thus the entropy gain of rolling a die is:
 	H_{before}(X) - H_{after}(X) = 2.584962500721156 - 0 = 2.584962500721156
 \]
 We say that the entropy gain for the event of rolling a fair die is about 2.58 bits.
+
+\begin{thebibliography}{9}
+
+\bibitem{reza94}
+  Fazlollah M. Reza,
+  \emph{An Introduction to Information Theory}.
+  ISBN 0-486-68210-2,
+  Dover Publications, Inc., New York,
+  Dover Edition,
+  1994.
+
+\end{thebibliography}
+
 	
-
-\section{Algorithmic information theory}
-
-\subsection{Definition}
 
 \end{document}
 
