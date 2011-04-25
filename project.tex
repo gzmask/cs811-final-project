@@ -12,6 +12,7 @@
 \setlength{\parindent}{0in}
 \usepackage{graphicx}
 \usepackage{mathtools}
+\usepackage{amsthm}
 \usepackage{parskip}
 
 \begin{document}
@@ -30,8 +31,12 @@ In information theory, the entropy of information means the measurement of the u
 \[
 	H(X) = E(I(X))
 \]
-Where E is the expected value, and I is the information content of X.
-Let $x_i \in X$, and $p(x_i)$ be the probability mass function of X, then the entropy can be written as\cite{reza94}:
+Where I is the information content of X, and E is the expected value.\\
+Let $x_i \in X$, and $p(x_i)$ be the probability mass function of X, then the information content of X is:
+\[
+	I(X) = -log_{2}p(x_i)
+\]
+Then the entropy can be written as\cite{reza94}:
 \[
 	H(X) = \sum_{i=1}^{n}p(x_i)I(x_i) = -\sum_{i=1}^{n}p(x_i)log_{2}p(x_i)
 \]
@@ -63,16 +68,16 @@ Therefore,
 Which means before toss the coin, the event would have 1 bit entropy.\\
 After the coin has been tossed, let's say the result is tail, then its possible outcome now is only $x_t$:
 \[
-	X = \{x_t\} ,p(X=x_t) = 1
+	X_t = \{x_t\} ,p(X_t=x_t) = 1
 \] 
 And its entropy is now:
 \[
-	H_{after}(X) = - (1 \times log_2 1 + 1 \times log_2 1)
+	H_{after}(X_t) = - (1 \times log_2 1 + 1 \times log_2 1)
 		= - (0 + 0) = 0
 \]
 Thus, the entropy we have gained during the coin tossing is:
 \[
-	H(X) = H_{before} - H_{after} = 1 - 0 = 1
+	H_{gained}(X) = H_{before} - H_{after} = 1 - 0 = 1
 \]
 Which is 1 bit entropy. This means we need 1 bit entropy to store the each toss of a fair coin.\\
 But what if the coin we toss is not fair?
@@ -101,20 +106,20 @@ Which equals to:
 \]
 Again, the entropy after the coin has been tossed with a result of head is 0:
 \[
-	X = \{x_h\} ,p(X=x_h) = 1
+	X_h = \{x_h\} ,p(X_h=x_h) = 1
 \]
 And its entropy is now:
 \[
-	H_{after}(X) = - (1 \times log_2 1 + 1 \times log_2 1)
+	H_{after}(X_h) = - (1 \times log_2 1 + 1 \times log_2 1)
 		= - (0 + 0) = 0
 \]
 Thus, the entropy we have gained during the unfair coin tossing is:
 \[
-	H(X) = H_{before} - H_{after} = 0.721928094887362 - 0 = 0.721928094887362
+	H_{gained}(X) = H_{before} - H_{after} = 0.721928094887362 - 0 = 0.721928094887362
 \]
 We can see that when the possibilities are not even, the entropy is 0.721928094887362 bit, which is less than 1 bit when the coin is fair.\\
 
-\subsection{The average information gain}
+\subsection{The average information gain with specific outcome}
 The above two examples gives us how many information on average we would gain during a fair coin toss event and a unfair coin toss event.\\
 Notice that these information gains are average information gains for each coin tosses considering both outcomes of heads and tails.\\\\
 What is the average information gain for the coin toss event that the outcomes are heads only or tails only, then? Let's look at the following examples:\\
@@ -164,6 +169,7 @@ When the outcome is head, we only gained 0.3 bit of information, where when the 
 What is the average entropy gain for the event of rolling a fair die? (in binary bits)
 
 \subsection{The Coding theory}
+By measuring entropy, it's possible that we can compress data and exploit better coding. 
 After finished exercise 1, we can see that the average entropy gain for the event of rolling a fair die is about 2.58 bits. How many bits of storage we need to save this information? Let's try using two bits first:
 \[
 	00 - x_1,
@@ -225,7 +231,7 @@ where we only used 24 bits. This is possible because of the new code mapping:
 \[
 	= \frac{1}{2} + \frac{1}{2}+ \frac{1}{3}+ \frac{1}{3}+ \frac{1}{2}+ \frac{1}{2} \approx 2.67
 \]
-Thus, we use about 2.67 bits for each outcome on average, instead of 3 bits. By measuring entropy, it's possible that we can compress data and exploit better coding. For example, in English, words being used more frequently codes with less letter than words being used rarely. Such as \{'I', 'is', 'a'\} compare to \{'communism', 'encephalopathy'\}
+Thus, we use about 2.67 bits for each outcome on average, instead of 3 bits. For example, in English, words being used more frequently are coded with less letters than words being used rarely. Such as \{'I', 'is', 'a'\} compare to \{'communism', 'encephalopathy'\}
 
 \subsection{Exercise 2 - entropy of languages}
 Try to explain why languages like English is more effecient to be inputed by a keyboard than languages like Chinese using Shannon's information theory.\\
@@ -236,42 +242,175 @@ Each English letter is being used evenly, and here we only considering 26 Englis
 There are about 3000 commonly used Chinese characters and they are being used evenly.\\
 
 \section{Algorithmic information theory}
-We can see that Shannon's information theory look at information in a probablistic and statistic way. By doing exercise 2, we can also see that using entropy to encode a language is tedious and troublesome. Even calculating the entropy of a language is hard, considering the probabilitic usage of different letters or characters are not the same. In reality, English has an entropy of 4.03 bits per word and Chinese has 9.65 bits per character. Calculating these entropies requires tremendous effort, not to mention how to establish a coding schema between then.
+We can see that Shannon's information theory look at information in a probablistic and statistic way. By doing exercise 2, we can also see that using entropy to encode a language is tedious and troublesome. Even calculating the entropy of a language is hard, considering the probabilitic usage of different letters or characters are not the same. In reality, English has an entropy of 4.03 bits per word and Chinese has 9.65 bits per character. Calculating these entropies requires tremendous effort, not to mention establishing a coding schema.
 
-Now let's look at a more descriptive and logical approach for the definition of information using Turing Machine's power.
+Now let's look at a more descriptive and logical approach for the definition of information using Turing Machine's power.\cite{sipser06}
 
 \subsection{Minimal length descriptions}
 Suppose we have two piece of information represented as binary strings:
 \[
-A = 0101010101010101010101010101010101010101
+	A = 0101010101010101010101010101010101010101
 \]
 \[
-B = 111001011010001110101000011101001101
+	B = 111001011010001110101000011101001101
 \]
-Simply applying Shannon's information theory, by the size of the storage space, we might say that A has more information because its storage space is sufficient for more entropy. 
+Simply applying Shannon's information theory, by the size of the storage space, we might say that A has more information because its storage space is sufficient for more entropy than B. However, using intuition, we find that B actually contain more information than A:\\ 
+
+A: repeat '01' 20 times\\
+
+B: The information is '111001011010001110101000011101001101'\\
+
+If we apply coding theory to these strings we would find out that indeed B has more information than A. However, using descriptive way to represent information is more logical for human to understand than finding some coding schema to match the inside pattern of some information. Since we have a definition of algorithm as a turing machine now, we can descript any information using turing machines. And we can view the optimalized representation of a piece of information as the minimal length description of this piece of information as a turing machine:
+\[
+	<M, w> = 11001111001100...1100 \mid 01 \mid 01101011...010
+\]
+11001111001100...1100 is the description of turing machine$<M>$ where every bit is doubled, 01 is the delimiter, and 01101011...010 is the input string w.\\
+
+\subsection{Descriptive complexity}
+The descriptive complexity of x is the length of the minimal description of x:
+\[
+	K(x)=|d(x)|
+\]
+Where d(x) is the minimal description of x, K(x) is the descriptive complexity of x.\\
+
+The descriptive complexity of x is less than or equal to the length of x plus a constant number c, which is universal and not dependent on the string x:
+\[
+	K(x) \leq |x| + c \qquad \alpha
+\]
+
+\begin{proof}
+We can construct a turing machine M, which it only outputs its input. 
+Since the length of this turing machine is fix and insignificantly compare to the length of its input, we can say that the upper bound of the Descriptive complexity of a piece of information is insignificantly more then the length of itself.
+\end{proof}
 
 
+The upper bound of the descriptive complexity of xx is insignificantly more than the descriptive complexity of x:
+\[
+	K(xx) \leq K(x) + c \qquad \beta
+\]
+
+\begin{proof}
+To represent a repetitive information, we can construct a Turing machine which says: Repeat the information of "..." (N) more time(s).
+\end{proof}
+
+The upper bound of the descriptive complexity of combining two piece information together is:
+\[
+	 K(xy) \leq 2K(x) + K(y) + c \qquad \gamma
+\]
+
+\begin{proof}
+we can construct A Turing machine M on its input w. M breaks input w into two parts, the description of x, denoted as d(x), with all bits doubled, a delimiter '01', and d(y).\\
+\end{proof}
+
+For any description language p, a fixed constant c exists that depends only on p, for all string x:
+\[
+	K(x) \leq K_p(x) + c
+\]
+Where $K_p(x)$ is a description of x in language p.\\
+\begin{proof}
+Denote description of x in LISP as $d_{lisp}(x)$.\\
+A TM M on input $d_{lisp}(x)$:\\
+    1. M interpret LISP;\\
+    2. M outputs x.\\
+$c = |<M>|$\\
+\end{proof}
 
 
+\subsection{Compressible and incompressible}
+First let's look at these definitions:\\
+
+\newtheorem{mydef}{Definition}
+\begin{mydef}
+If $K(x) \leq |x| - c$,
+    then x is c-compressible;\\
+\end{mydef}
 
 
+\begin{mydef}
+If $K(x) > |x| - c$,
+    then x is incompressible by c;\\
+\end{mydef}
 
 
+\begin{mydef}
+If $K(x) \geq |x|$,
+    then x is incompressible.\\
+\end{mydef}
 
 
+Now let's look at some facts about compressible and incompressible:\\
+
+\newtheorem{mydef2}{Statement}
+\begin{mydef2}
+Incompressible strings of every length exist.\\
+\end{mydef2}
+
+\begin{proof}
+For each length n, there are 2n possible strings, 
+and there are 1+2+4+8+...+2n-1 = 2n-1 possible descriptions.
+Therefore at least one string of length n is incompressible.
+\end{proof}
 
 
+\begin{mydef2}
+At least $2^n - 2^{n-c+1} + 1$ strings of length n are incompressible by c.
+\end{mydef2}
 
+\begin{proof}
+For each length n, at most $2^{n-c+1} - 1$ strings are 
+c-compressible. The remaining $2^n - (2^{n-c+1} + 1)$ are incompressible by c.
+\end{proof}
 
+To understand Statement 3, we first need to look at following two definitions:
+\newtheorem{mydef3}{Definition}
+\begin{mydef3}
+A property of x, is a function f, such that f(x) only returns true or false.
+\end{mydef3}
 
+\begin{mydef3}
+If we say A property holds for almost all strings, then as the length n grows, the fraction of the strings set $A\{(a)\}$, in which f(a) = false, approaches 0. 
+\end{mydef3}
 
+Now let's look at this statement:
+\begin{mydef2}
+There exists a computable property f that holds for almost all strings. Then, for all b > 0, f returns false on limited number of strings that are incompressible by b.
+\end{mydef2}
 
+\begin{proof}
+A TM M on input i, where i is a binary integer:\\
+    1. Find the ith string s where f(s) = false. All strings are generated with lexical orders.\\
+    2. Output string s.\\
+\\
+Then, for any string x where f(x) = false, $<M, i_x>$ is description.\\
+\\
+Get any number $b > 0$. Select n such that $1/2^{b+c+1}$ fraction of strings of length n or less fail to have property f. Let x be a string in length n that fails f. We have $2^{n+2} - 1$strings of length n or less. Thus:\\
+    $i_x \leq (2^{n+1} - 1) / (2^{b+c+1}) \leq 2^{n-b-c}$\\
+\\
+Therefore $|i_x| \leq n-b-c$, so $|<M, i_x>|$ is at most $(n-b-c)+c = n - b$,\\
+    $K(x) \leq n - b$\\
+\\
+Which exactly means every x fails f is compressible by b.\\
+\end{proof}
 
+How do we find incompressible strings?\\
+\begin{mydef2}
+For some constant numbers b, for every string x, the minimal description d(x) of x is incompressible by b.
+\end{mydef2}
 
-
-
-
-
+\begin{proof}
+A TM M, on input $<R,y>$, R is a TM and y is string:\\
+    1. Run R on y. If output is not the form of $<S,z>$, reject;\\
+    2. Run S on z, halt with output on tape.\\
+\\
+Let $b = |<M>| + 1$. Assume that d(x) is b-compressible, then:\\
+    $|d(d(x))| <= |d(x)| - b$\\
+The length of $<M, d(d(x))>$ is at most :\\
+    $|<M>| + |d(d(x))| <= (b-1) + (|d(x)|-b)$\\
+    $|<M>| + |d(d(x))| <= |d(x)| - 1$\\
+But, $<M, d(d(x))>$ is a description of x, denoted as d(x):\\
+    $|d(x)| <= |d(x)| - 1$\\
+This is impossible! Thus this is contradiction, and d(x) can not be b-compressible for all strings x.\\
+\end{proof}
 
 
 
@@ -349,7 +488,7 @@ $\implies$
 We also need to calculate the entropy after we roll the die.
 Let's say the outcome is $x_i$:
 \[
-	X = \{x_i\}
+	X_i = \{x_i\}
 \]
 Then we figure the possibility distribution:
 \[
@@ -357,28 +496,28 @@ Then we figure the possibility distribution:
 \]
 Then the entropy:
 \[
-	H_{after}(X) = 
+	H_{after}(X_i) = 
 	-p(x_i)log_{2}p(x_i)  
 \]
 \[
 \implies
-	H_{after}(X) = 
+	H_{after}(X_i) = 
 	-1log_{2}1 = 0
 \]  
 Thus the entropy gain of rolling a die is:
 \[
-	H_{before}(X) - H_{after}(X) = 2.584962500721156 - 0 = 2.584962500721156
+	H_{gained}(X) = H_{before}(X) - H_{after}(X_i) = 2.584962500721156 - 0 = 2.584962500721156
 \]
 We say that the entropy gain for the event of rolling a fair die is about 2.58 bits.
 
 \subsection{Exercise 2 Solution}
 A typical keyboard device has about 50 keys related to language inputs. Thus it's average entropy for each key stroke is:
 \[
-	H(X) = -\sum_{i=1}^{50}p(x_i)log_{2}p(x_i)
+	H(X_k) = -\sum_{i=1}^{50}p(x_i)log_{2}p(x_i)
 \]
 \[
 \implies
-	H(X) = -\sum_{i=1}^{50}\frac{1}{50}log_{2}\frac{1}{50}
+	H(X_k) = -\sum_{i=1}^{50}\frac{1}{50}log_{2}\frac{1}{50}
 \]
 \[
 	= log_{2}50 \approx 5.643856189774724
@@ -386,7 +525,7 @@ A typical keyboard device has about 50 keys related to language inputs. Thus it'
 Which is about 5.6 bits entropy for each key stroke.\\
 Now let's calculate the average entropy for each letter of English. Assuming their possibility distribution is even and considering 26 English alphabets plus peroid and comma:
 \[
-	H(X) = -\sum_{i=1}^{28}\frac{1}{28}log_{2}\frac{1}{28}
+	H(X_e) = -\sum_{i=1}^{28}\frac{1}{28}log_{2}\frac{1}{28}
 \]
 \[
 	= log_{2}28 \approx 4.807354922057604
@@ -396,7 +535,7 @@ Storing each letter in English with 5.6 bits of entropy per key stroke is suffic
 
 Let's look at entropy of each character of Chinese. Assuming there are about 3000 commonly used Chinese characters and their possibility distribution is even: 
 \[
-	H(X) = -\sum_{i=1}^{3000}\frac{1}{3000}log_{2}\frac{1}{3000}
+	H(X_c) = -\sum_{i=1}^{3000}\frac{1}{3000}log_{2}\frac{1}{3000}
 \]
 \[
 	= log_{2}3000 \approx 11.55
@@ -413,6 +552,14 @@ Storing each letter in Chinese with 5.6 bits of entropy per key stroke is insuff
   Dover Publications, Inc., New York,
   Dover Edition,
   1994.
+
+\bibitem{sipser06}
+  Micheal Sipser,
+  \emph{Introduction to The theory of Computation}.
+  ISBN 0-534-95097-3,
+  THOIVISON COURSE TECHNOLOGY, Boston, Massachusetts, 02210.
+  Second Edition,
+  2006.
 
 \end{thebibliography}
 
