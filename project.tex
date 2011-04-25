@@ -35,7 +35,7 @@ Let $x_i \in X$, and $p(x_i)$ be the probability mass function of X, then the en
 \[
 	H(X) = \sum_{i=1}^{n}p(x_i)I(x_i) = -\sum_{i=1}^{n}p(x_i)log_{2}p(x_i)
 \]
-Here we assume the unit of entropy is bit, therefore the logarithm base is 2.
+Note that each $p(x_i)I(x_i)$ gives the expect value, where $I(x_i)$ is the average entropy of the specific event outcome. Here we assume the unit of entropy is bit, therefore the logarithm base is 2.
 
 \subsection{The fair coin tossing example}
 When tossing a coin, the outcomes are either head($x_h$) or tail($x_t$). Thus
@@ -48,7 +48,7 @@ Thus, before tossing the coin once, its entropy is:
 \]
 Assume this is a fair coin:
 \[
-	p(x_h) = 0.5, p(x_t) = 0.5
+	p(X=x_h) = 0.5, p(X=x_t) = 0.5
 \]
 Therefore,
 \[
@@ -58,7 +58,7 @@ Therefore,
 Which means before toss the coin, the event would have 1 bit entropy.\\
 After the coin has been tossed, let's say the result is tail, then its possible outcome now is only $x_t$:
 \[
-	X = \{x_t\} ,p(x_t) = 1
+	X = \{x_t\} ,p(X=x_t) = 1
 \] 
 And its entropy is now:
 \[
@@ -75,7 +75,7 @@ But what if the coin we toss is not fair?
 \subsection{The unfair coin tossing example}
 Assume we have an unfair coin that the chance it lands on its head is 0.8 and the chance it lands on its tail is 0.2:
 \[
-	p(x_h) = 0.8, p(x_t) = 0.2
+	p(X=x_h) = 0.8, p(X=x_t) = 0.2
 \]
 Thus, before tossing the coin once, its entropy is:
 \[
@@ -96,7 +96,7 @@ Which equals to:
 \]
 Again, the entropy after the coin has been tossed with a result of head is 0:
 \[
-	X = \{x_h\} ,p(x_h) = 1
+	X = \{x_h\} ,p(X=x_h) = 1
 \]
 And its entropy is now:
 \[
@@ -154,6 +154,100 @@ In the case of the unfair coin toss with outcomes of tails only:
 	I(X) = - log_2 \frac{1}{5} = 2.321928094887362 
 \]
 When the outcome is head, we only gained 0.3 bit of information, where when the outcome is tail, we gained 2.3 bits of information. We discovered that more entropy is gained on average with each unfair coin toss event with the outcome of less common. We conclude that when the outcome of an event is less common, then it contains more information.
+
+\subsection{Exercise 1 - Rolling a fair die }
+What is the average entropy gain for the event of rolling a fair die? (in binary bits)
+
+\subsection{Exercise 1 Solution}
+First, we list the domain of the outcomes of rolling a fair die:
+\[
+	X = \{x_1, x_2, x_3, x_4, x_5, x_6\}
+\]
+Second, we list the possibility distribution:
+\[
+	p(X=x_1) = \frac{1}{6}
+\]
+\[
+	p(X=x_2) = \frac{1}{6}
+\]
+\[
+	p(X=x_3) = \frac{1}{6}
+\]
+\[
+	p(X=x_4) = \frac{1}{6}
+\]
+\[
+	p(X=x_5) = \frac{1}{6}
+\]
+\[
+	p(X=x_6) = \frac{1}{6}
+\]
+And then we calculate the entropy before we roll the die:
+\[
+	H_{before}(X) = 
+\]
+\[
+	-p(x_1)log_{2}p(x_1)  
+	- p(x_2)log_{2}p(x_2)
+\]
+\[
+	- p(x_3)log_{2}p(x_3)
+	- p(x_4)log_{2}p(x_4)
+\]
+\[
+	- p(x_5)log_{2}p(x_5)
+	- p(x_6)log_{2}p(x_6)
+\]
+$\implies$
+\[
+	H_{before}(X) = 
+\]
+\[
+	-\frac{1}{6}log_{2}\frac{1}{6}  
+	-\frac{1}{6}log_{2}\frac{1}{6}  
+\]
+\[
+	-\frac{1}{6}log_{2}\frac{1}{6}  
+	-\frac{1}{6}log_{2}\frac{1}{6}  
+\]
+\[
+	-\frac{1}{6}log_{2}\frac{1}{6}  
+	-\frac{1}{6}log_{2}\frac{1}{6}  
+\]
+$\implies$
+\[
+	H_{before}(X) = 
+	-log_{2}\frac{1}{6}  
+\]
+$\implies$
+\[
+	H_{before}(X) = 2.584962500721156 
+\]
+We also need to calculate the entropy after we roll the die.
+Let's say the outcome is $x_i$:
+\[
+	X = \{x_i\}
+\]
+Then we figure the possibility distribution:
+\[
+	p(x_i) = 1
+\]
+Then the entropy:
+\[
+	H_{after}(X) = 
+	-p(x_i)log_{2}p(x_i)  
+\]
+\[
+\implies
+	H_{after}(X) = 
+	-1log_{2}1 = 0
+\]  
+Thus the entropy gain of rolling a die is:
+\[
+	H_{before}(X) - H_{after}(X) = 2.584962500721156 - 0 = 2.584962500721156
+\]
+We say that the entropy gain for the event of rolling a fair die is about 2.58 bits.
+	
 
 \section{Algorithmic information theory}
 
