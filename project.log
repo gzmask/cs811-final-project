@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  25 APR 2011 13:26
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  25 APR 2011 15:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -273,12 +273,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 228--232
  []
 
 [6] [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 348--351
+Underfull \hbox (badness 10000) in paragraph at lines 351--354
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--361
+Underfull \hbox (badness 10000) in paragraph at lines 361--364
 
  []
 
@@ -286,11 +286,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 358--361
 Here is how much of TeX's memory you used:
  2372 strings out of 493747
  33133 string characters out of 3143546
- 92365 words of memory out of 3000000
+ 93365 words of memory out of 3000000
  5645 multiletter control sequences out of 15000+200000
  10581 words of font info for 38 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 38i,6n,23p,450b,201s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,6n,23p,514b,195s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2010/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmbx12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/
@@ -303,7 +303,7 @@ ts/cm/cmr12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts
 m/cmr8.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 ti12.pfb>
-Output written on project.pdf (10 pages, 139354 bytes).
+Output written on project.pdf (10 pages, 139943 bytes).
 PDF statistics:
  81 PDF objects out of 1000 (max. 8388607)
  57 compressed objects within 1 object stream
