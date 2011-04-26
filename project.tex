@@ -19,10 +19,11 @@
 \maketitle
 
 \begin{abstract}
-This project paper reviews Claude E. Shannon's information theory and the algorithmic information theory.
+This project paper looks at Claude E. Shannon's information theory and the algorithmic information theory.
 \end{abstract}
 
 \section{Introduction}
+Information is an abstract idea. Some might see it as a sequence of symbols, some might see it as some sort of meanings. No matter how we think it is, information takes space to store, and it takes energy to process. In this paper we look like two different approaches to the definition of information, and try to understand what informations means in depth.
 
 \section{Claude E. Shannon's information theory}
 
@@ -412,7 +413,11 @@ But, $<M, d(d(x))>$ is a description of x, denoted as d(x):\\
 This is impossible! Thus this is contradiction, and d(x) can not be b-compressible for all strings x.\\
 \end{proof}
 
+\subsection{Exercise 3 - Descriptive Complexity}
+Show that the function K(x) is not a computable function.
 
+\section{conclusion}
+After finished Exercise 3, we can see that in algorithmic information theory, finding the minimal length for a specific piece of information is uncomputable. Where in Shannon's information theory, it is possible to find an encoding that matches the entropy of a piece of information. We might say that when algorithmic information theory explores the content of the information, Shannon's information theory explores the form and storage of the information.
 
 
 
@@ -542,6 +547,25 @@ Let's look at entropy of each character of Chinese. Assuming there are about 300
 \]
 Thus we have about 11.55 bits entropy for each character in Chinese.\\
 Storing each letter in Chinese with 5.6 bits of entropy per key stroke is insufficient. Thus we need a coding schema containning more than three key strokes for each Chinese character, and users have to remember the coding schema in order to use the keyboard as an input device. In fact, Chinese Pinyin is being use as a such schema, where Chinese Pinyin is very close to English compare to traditional Chinese.\\
+
+\subsection{Exercise 3 Solution}
+\begin{proof}
+Suppose on the contrary that Turing machine M computes $K(x)$. Define a
+Turing machine N which computes the 1st incompressible string of
+length n:\\
+
+Let N be:\\
+On input n (an integer in binary notation),\\
+1. Enumerate strings s of length n in lexicographical order.\\
+2. For each s, call M to compute K(s).\\
+3. If $K(s) \geq |s|$, output s and halt.\\
+\\
+Now the length of $<N>n$ is $|<N>| + log(n) = log(n) + c$. (Note that in
+$<N>n$, n is a binary string, wherease the n in "$log(n)$" refers to the
+integer defined by the string n.) By choosing n sufficiently large we
+have $|s| = n > log(n) + c = |<N>n|$, which contradicts the
+incompressibility of s. Therefore machine M cannot exist.
+\end{proof}
 
 \begin{thebibliography}{9}
 

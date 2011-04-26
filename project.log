@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  25 APR 2011 17:41
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  25 APR 2011 18:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -229,38 +229,38 @@ e
 [1
 
 {/usr/local/texlive/2010/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 42--44
+Underfull \hbox (badness 10000) in paragraph at lines 43--45
 
  []
 
-[2]
-Overfull \hbox (36.19002pt too wide) in paragraph at lines 119--121
+[2] [3]
+Overfull \hbox (36.19002pt too wide) in paragraph at lines 120--122
 \OT1/cmr/m/n/12 We can see that when the pos-si-bil-i-ties are not even, the en
 -tropy is 0.721928094887362
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 119--121
+Underfull \hbox (badness 10000) in paragraph at lines 120--122
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--127
+Underfull \hbox (badness 10000) in paragraph at lines 124--128
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--127
-
- []
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 146--148
+Underfull \hbox (badness 10000) in paragraph at lines 124--128
 
  []
 
 [4]
-Overfull \hbox (6.02399pt too wide) detected at line 192
+Underfull \hbox (badness 10000) in paragraph at lines 147--149
+
+ []
+
+
+Overfull \hbox (6.02399pt too wide) detected at line 193
 \OT1/cmr/m/n/12 000 \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 x[]; \OT1/cmr/m/n/12 
 001 \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 x[]; \OT1/cmr/m/n/12 010 \OMS/cmsy/m/
 n/12 ^^@ \OML/cmm/m/it/12 x[]; \OT1/cmr/m/n/12 011 \OMS/cmsy/m/n/12 ^^@ \OML/cm
@@ -271,125 +271,124 @@ m/n/12 ^^@ \OML/cmm/m/it/12 unused
  []
 
 [5]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 234.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 235.
 
  (/usr/local/texlive/2010/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 234.
-
-Underfull \hbox (badness 10000) in paragraph at lines 237--238
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 239--243
-
- []
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 256--258
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 235.
+ [6]
+Underfull \hbox (badness 10000) in paragraph at lines 238--239
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 259--260
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 261--262
+Underfull \hbox (badness 10000) in paragraph at lines 240--244
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 266--268
+Underfull \hbox (badness 10000) in paragraph at lines 257--259
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 273--275
+Underfull \hbox (badness 10000) in paragraph at lines 260--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 262--263
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 267--269
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--276
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 308--311
+Underfull \hbox (badness 10000) in paragraph at lines 309--312
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 320--321
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 321--322
 
  []
 
 \c@mydef=\count109
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--326
+Underfull \hbox (badness 10000) in paragraph at lines 325--327
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--332
+Underfull \hbox (badness 10000) in paragraph at lines 331--333
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--338
+Underfull \hbox (badness 10000) in paragraph at lines 337--339
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 341--342
+Underfull \hbox (badness 10000) in paragraph at lines 342--343
 
  []
 
 \c@mydef2=\count110
 
-Underfull \hbox (badness 10000) in paragraph at lines 345--346
+Underfull \hbox (badness 10000) in paragraph at lines 346--347
 
  []
 
 
-Overfull \hbox (47.87941pt too wide) in paragraph at lines 349--352
+Overfull \hbox (47.87941pt too wide) in paragraph at lines 350--353
 []\OT1/cmr/m/n/12 For each length n, there are 2n pos-si-ble strings, and there
  are 1+2+4+8+...+2n-
  []
 
-[9]
 \c@mydef3=\count111
-
-Underfull \hbox (badness 10000) in paragraph at lines 380--393
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 380--393
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 380--393
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 380--393
-
- []
-
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 395--396
+Underfull \hbox (badness 10000) in paragraph at lines 381--394
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 401--413
+Underfull \hbox (badness 10000) in paragraph at lines 381--394
 
  []
 
-[11]
-Overfull \hbox (39.58923pt too wide) detected at line 510
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--394
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--394
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 396--397
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 402--414
+
+ []
+
+[11] [12]
+Overfull \hbox (39.58923pt too wide) detected at line 515
 \OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 ) = \OML
 /cmm/m/it/12 H[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 ) \OMS/cmsy/
 m/n/12 ^^@ \OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X[]\OT1/cmr/m/
@@ -397,17 +396,27 @@ n/12 ) = 2\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 584962500721156 \OMS/cmsy/m/n/12 ^^
 @ \OT1/cmr/m/n/12 0 = 2\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 584962500721156
  []
 
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 532--535
-
- []
-
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 542--545
+Underfull \hbox (badness 10000) in paragraph at lines 537--540
 
  []
 
-[14] (./project.aux) ) 
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 547--550
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 553--556
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 557--568
+
+ []
+
+[15] [16] (./project.aux) ) 
 Here is how much of TeX's memory you used:
  2461 strings out of 493747
  34154 string characters out of 3143546
@@ -415,24 +424,24 @@ Here is how much of TeX's memory you used:
  5730 multiletter control sequences out of 15000+200000
  10888 words of font info for 39 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 38i,6n,23p,571b,195s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2010/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmbx10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmbx12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmex10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmmi12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi8.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr17.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r8.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
-0.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.
-pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.p
-fb>
-Output written on project.pdf (14 pages, 167893 bytes).
+ 38i,6n,23p,571b,199s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2010/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmex10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi8.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr17.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr8.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy8.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
+i12.pfb>
+Output written on project.pdf (16 pages, 170137 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
- 69 compressed objects within 1 object stream
+ 104 PDF objects out of 1000 (max. 8388607)
+ 73 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
