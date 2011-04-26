@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  25 APR 2011 18:34
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  25 APR 2011 18:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -387,7 +387,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 402--414
 
  []
 
-[11] [12]
+[11] [12] [13]
 Overfull \hbox (39.58923pt too wide) detected at line 515
 \OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 ) = \OML
 /cmm/m/it/12 H[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 ) \OMS/cmsy/
@@ -396,7 +396,7 @@ n/12 ) = 2\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 584962500721156 \OMS/cmsy/m/n/12 ^^
 @ \OT1/cmr/m/n/12 0 = 2\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 584962500721156
  []
 
-[13]
+
 Underfull \hbox (badness 10000) in paragraph at lines 537--540
 
  []
@@ -424,7 +424,7 @@ Here is how much of TeX's memory you used:
  5730 multiletter control sequences out of 15000+200000
  10888 words of font info for 39 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 38i,6n,23p,571b,199s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,6n,23p,764b,195s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2010/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public
@@ -438,7 +438,7 @@ cm/cmr8.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmsy10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy8.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 i12.pfb>
-Output written on project.pdf (16 pages, 170137 bytes).
+Output written on project.pdf (16 pages, 170331 bytes).
 PDF statistics:
  104 PDF objects out of 1000 (max. 8388607)
  73 compressed objects within 1 object stream
